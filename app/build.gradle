@@ -5,7 +5,7 @@ android {
 
     defaultConfig {
         applicationId "ev.mikheeva.AndBaz_Les1_HW1"
-        minSdkVersion 7
+        minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
