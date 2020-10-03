@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">АндрБаз_Урок1_ДЗ_1</string>
+    <string name="hello_geekbrains">Привет, Geekbrains!</string>
+    <string name="tems">Сменить тему</string>
+    <string name="moscow">Москва</string>
+    <string name="temp">25 °C</string>
+    <string name="data">03.10.2020</string>
+    <string name="wind">ВЕТЕР</string>
+    <string name="humidity">ВЛАЖНОСТЬ</string>
+    <string name="pressure">ДАВЛЕНИЕ</string>
+    <string name="windS">14 м/с</string>
+    <string name="humidityS">59 %</string>
+    <string name="pressureS">772 мм рт. ст.</string>
+    <string name="time">14 : 30</string>
+</resources>
