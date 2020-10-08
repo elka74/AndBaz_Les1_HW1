@@ -1,41 +1,56 @@
 package ev.mikheeva.AndBaz_Les1_HW1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-    ImageView imageView;
-    Button button;
+public class MainActivity extends AppCompatActivity implements OnClickListener {
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Menu menu_main;
+        TextView editText = findViewById(R.id.editTextTime);
+        TextView editTextdata = findViewById(R.id.editTextDate);
+        CheckBox checkBox = findViewById(R.id.checkBox);
+        CheckBox checkBox2 = findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = findViewById(R.id.checkBox3);
+        Button button = findViewById(R.id.button);
 
-        TextView textView = findViewById(R.id.textView);
-        TextView textView1 = findViewById(R.id.textView1);
-        TextView textView2= findViewById(R.id.textView2);
-        TextView textView3= findViewById(R.id.textView3);
-        TextView textView4= findViewById(R.id.textView4);
-        TextView textView5= findViewById(R.id.textView5);
-        TextView textView6= findViewById(R.id.textView6);
-        TextView textView7 = findViewById(R.id.textView7);
-        button = findViewById(R.id.button);
-        imageView = findViewById(R.id.imageView);
-        EditText editText = findViewById(R.id.editTextTime);
-        EditText editTextdata = findViewById(R.id.editTextDate);
+        button.setOnClickListener(this);
 
-        View.OnClickListener clickButton = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              imageView.setImageResource(R.drawable.background_dent);
+    }
+        @Override
+        public boolean onCreateOptionsMenu (Menu menu){
+            getMenuInflater().inflate(R.menu.menu_main, menu);
+            return true;
+        }
+
+        @Override
+        public boolean onOptionsItemSelected (MenuItem item){
+            switch (item.getItemId()) {
+                case R.id.action_setting:
+                    Intent intent = new Intent(this, MainActivity3.class);
+                    startActivity(intent);
             }
-        };
-        button.setOnClickListener(clickButton);
+            return super.onOptionsItemSelected(item);
+        }
+
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(this, MainActivityTwo.class);
+        startActivity(intent);
     }
 }
+
+
