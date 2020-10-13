@@ -1,6 +1,5 @@
 package ev.mikheeva.AndBaz_Les1_HW1;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 
-public class MainActivity3 extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity3 extends AppCompatActivity {
     private RadioButton radioButton;
     private RadioButton radioButton1;
     private ConstraintLayout cBackground;
@@ -30,7 +29,12 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
         radioButton1 = findViewById(R.id.radioButton2);
         cBackground = findViewById(R.id.ConL);
         button = findViewById(R.id.button2);
-        button.setOnClickListener(this);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
         public void BG(View view) {
@@ -46,10 +50,5 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
             }
         }
 
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(MainActivity3.this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
+
     }

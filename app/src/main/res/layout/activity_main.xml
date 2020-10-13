@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_more"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
 
@@ -34,7 +35,7 @@
         android:layout_marginLeft="16dp"
         android:ems="10"
         android:gravity="center"
-        android:text = "@string/time"
+        android:text="@string/time"
         android:textColor="@color/colorW"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
@@ -104,8 +105,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="@string/dop"
-        android:textSize="20sp"
         android:textColor="@color/colorW"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
@@ -124,13 +125,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorW"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/c_t"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView3" />
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/city"
-                android:textSize="30sp"
-                android:textColor="@color/colorGray"/>
+                android:textColor="@color/colorGray"
+                android:textSize="30sp" />
 
         </LinearLayout>
     </ScrollView>
@@ -159,8 +172,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="@string/choice"
-        android:textSize="20sp"
         android:textColor="@color/colorW"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

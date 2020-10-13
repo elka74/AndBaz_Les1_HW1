@@ -1,6 +1,5 @@
 package ev.mikheeva.AndBaz_Les1_HW1;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivityTwo extends AppCompatActivity implements View.OnClickListener {
+public class MainActivityTwo extends AppCompatActivity {
     private Button button;
     private View.OnClickListener onClickListener;
 
@@ -30,12 +29,12 @@ public class MainActivityTwo extends AppCompatActivity implements View.OnClickLi
         TextView textView21 = findViewById(R.id.textView21);
         ImageView imageView = findViewById(R.id.imageView2);
         button = findViewById(R.id.button2);
-        button.setOnClickListener(this);
-    }
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(MainActivityTwo.this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }

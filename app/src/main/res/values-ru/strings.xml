@@ -23,4 +23,5 @@
     <string name="tema_act1">светлая тема</string>
     <string name="tema_act2">темная тема</string>
     <string name="back">НАЗАД</string>
+    <string name="c_t">Введите название города</string>
 </resources>
