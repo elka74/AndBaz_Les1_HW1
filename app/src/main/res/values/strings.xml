@@ -23,4 +23,5 @@
     <string name="tema_act2">dark theme</string>
     <string name="back">BACK</string>
     <string name="c_t">Enter the name of the city</string>
+    <string name="button_city">Attractions</string>
 </resources>
